@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{TITLE}</title>
+    <style>
+
+        :root {
+            --backColor: {BACK_COLOR};
+            --textColor: {TEXT_COLOR};
+        }
+
+        #alt {
+            width: 100px;
+        }
+
+
+        body {
+            margin: 0;
+            color: var(--textColor)
+        }
+        #back {
+            width: 100%;
+            height: 200px;
+        }
+        center {
+            background-color: rgba(var(--backColor), .3);
+            width: 100%;
+        }
+        #content {
+            background-color: var(--backColor);
+            width: 30%;
+            min-width: 450px;
+            border: 1px solid lightgray;
+        }
+        #linea {
+            color: var(--textColor);
+            width: 80%;
+        }
+
+        #posts {
+            color: black
+        }
+
+        .post {
+            border: 1px solid lightgray;
+            margin: 10px;
+            text-align: left;
+            padding: 3px;
+            background-color: white;
+        }
+        .pinnedPost {
+            color: rgb(0, 180, 255);
+        }
+        .reblogSymbol {
+            color: darkgray;
+        }
+        .reblog {
+            border-bottom: 1px solid darkgray;
+        }
+        .tumblrImage {
+            width: 100%;
+        }
+        #askButton {
+            color:white;
+            background-color: var(--textColor);
+            border-radius: 30px;
+            border: 0;
+            padding: 5px 20px;
+        }
+        .buttonResult {
+            border-radius: 30px;
+            background-color: white;
+            border: 2px solid black;
+            color: black;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div id="content">
+            <!--<img src="{BACKGROUND}" alt="background"/>
+            <img src="{PIC}" alt="pic"/>-->
+            <img src="{BACK_IMAGE}" id="back"/>
+            <img src="{ALT_IMAGE}" id="alt"/>
+            <h1>{TITLE}</h1>
+            <h3>{DESCRIPTION}</h3>
+            <button id="askButton">{ASK}</button>
+            <div>
+                Top tags: {TAGS}
+            </div>
+            <div>
+                Linked accounts: {ACCOUNTS}
+            </div>
+            <div>
+                Total posts: {POSTS}<br>
+                Total likes: {LIKES}<br>
+                Total reblogs: {REBLOGS}<br>
+                Total comments: {COMMENTS}<br>
+                Total notes: {NOTES}<br>
+                Created: {CREATED}
+            </div>
+
+            <div id="posts">
+                <hr id="linea">
+                {BODY_NOW}
+            </div>
+        </div>
+    </center>
+
+</body>
+</html>
